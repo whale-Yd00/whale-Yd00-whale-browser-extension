@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whale 网页文字读取</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header class="popup-header">
+      <h1>网页文字</h1>
+      <button type="button" id="readBtn">读取</button>
+    </header>
+
+    <section class="meta">
+      <div id="pageTitle" class="page-title">尚未读取</div>
+      <div id="pageUrl" class="page-url"></div>
+      <div id="status" class="status">打开目标网页后点击读取。</div>
+    </section>
+
+    <textarea id="pageText" readonly placeholder="读取到的正文会出现在这里"></textarea>
+
+    <section class="actions">
+      <button type="button" id="copyBtn">复制</button>
+      <button type="button" id="sendBtn">发送到 Whale</button>
+    </section>
+
+    <label class="app-url-label" for="targetModeInput">目标应用</label>
+    <select id="targetModeInput">
+      <option value="whale">Whale-LLT</option>
+      <option value="sullyos">SullyOS</option>
+    </select>
+
+    <label class="app-url-label" for="appUrlInput">目标网页地址</label>
+    <input id="appUrlInput" type="url" placeholder="例如：http://localhost:8080/index.html">
+
+    <label class="app-url-label sullyos-only" for="sullyCharacterInput" hidden>发送给</label>
+    <div class="character-row sullyos-only" hidden>
+      <select id="sullyCharacterInput">
+        <option value="">自动选择当前/最近角色</option>
+      </select>
+      <button type="button" id="refreshCharactersBtn">刷新</button>
+    </div>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Whale 网页文字读取",
+  "description": "读取当前浏览器标签页里的可见文字，并分享给 Whale-LLT。",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "scripting", "clipboardWrite", "storage"],
+  "optional_host_permissions": ["http://*/*", "https://*/*", "file:///*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "读取当前网页文字"
+  }
+}
